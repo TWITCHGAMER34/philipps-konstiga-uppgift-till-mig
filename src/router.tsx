@@ -3,11 +3,14 @@ import HomePage from "./pages/HomePage/HomePage.tsx";
 import JokesPage from "./pages/JokesGenerator/JokesGen.tsx";
 import PassGen from "./pages/PasswordGen/PassGen.tsx";
 import PassCheck from "./pages/PasswordCheck/PassCheck.tsx";
+import ParticlesBg from "./pages/part/Particles.tsx";
+
 
 export default function Router() {
     return (
             <BrowserRouter>
                 <Link to={"/"}><button>Home</button></Link>
+                <ParticlesBg/>
                 <Routes>
                     <Route path={"/"} element={<HomePage/>}/>
                     <Route path={"/jokes"} element={<JokesPage/>}/>
@@ -15,5 +18,5 @@ export default function Router() {
                     <Route path={"/passcheck"} element={<PassCheck/>}/>
                 </Routes>
             </BrowserRouter>
-);
+    );
 }
