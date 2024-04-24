@@ -1,8 +1,14 @@
 .navbar {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.49);
+  z-index: 2;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  backdrop-filter: blur(5px);
 }
 
 .navLink {

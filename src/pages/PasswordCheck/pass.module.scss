@@ -68,10 +68,18 @@
     }
 }
 
-.scores{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.score{
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    p{
+        margin: 15px;
+
+    }
 }
 
 .warning {
@@ -80,8 +88,4 @@
 
 .suggestions {
     color: orange;
-}
-
-.info {
-    color: white;
 }

@@ -21,6 +21,7 @@ export default function particles() {
     if (!init) return null;
     return (
         <Particles
+            style={{zIndex: 1}}
             id='footer-particles'
             particlesLoaded={particlesLoaded}
             options={{

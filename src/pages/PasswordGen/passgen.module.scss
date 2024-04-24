@@ -15,7 +15,7 @@
 }
 
 .inputField {
-  width: 40%;
+  width: 200px;
   padding: 0.5em;
   font-size: 1em;
   margin-bottom: 1em;
@@ -31,8 +31,97 @@
   background-color: #4caf50;
   color: white;
   cursor: pointer;
+
+  &:disabled {
+    background-color: red;
+  }
 }
 
-.passwordError{
+.passwordError {
   color: red;
 }
+
+.genPassBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  background-color: rgba(51, 51, 51, 0.35);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+
+  .genPass {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: white;
+    filter: blur(5px);
+    transition: filter 0.5s;
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+
+}
+
+.alertModal {
+  position: relative;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+
+/* The slider itself */
+.inputField {
+  -webkit-appearance: none; /* Override default CSS styles */
+  justify-self: center;
+  align-self: center;
+  appearance: none;
+  width: 200px; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: white; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  &::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: white; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+}
+

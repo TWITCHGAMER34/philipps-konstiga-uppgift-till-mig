@@ -55,15 +55,21 @@ export default function PassCheck() {
                 {strength.suggestions.length > 0 &&
                     <p className={styles.suggestions}>Suggestions: {strength.suggestions.join(', ')}</p>}
                 <p className={styles.info}>Estimated time to crack (offline, slow
-                    hashing): {strength.crackTimes?.offline_slow_hashing_1e4_per_second}</p>
+                    hashing):</p>
+                <p> {strength.crackTimes?.offline_slow_hashing_1e4_per_second}</p>
                 <p className={styles.info}>Estimated time to crack (offline, fast
-                    hashing): {strength.crackTimes?.offline_fast_hashing_1e10_per_second}</p>
+                    hashing):</p>
+                <p>{strength.crackTimes?.offline_fast_hashing_1e10_per_second}</p>
                 <p className={styles.info}>Estimated time to crack (online, no
-                    throttling): {strength.crackTimes?.online_no_throttling_10_per_second}</p>
+                    throttling):</p>
+                <p>{strength.crackTimes?.online_no_throttling_10_per_second}</p>
                 <p className={styles.info}>Estimated time to crack (online,
-                    throttling): {strength.crackTimes?.online_throttling_100_per_hour}</p>
-                <p className={styles.info}>Estimated guesses needed: {strength.guesses}</p>
-                <p className={styles.info}>Calculation time: {strength.calcTime} ms</p>
+                    throttling):</p>
+                <p>{strength.crackTimes?.online_throttling_100_per_hour}</p>
+                <p className={styles.info}>Estimated guesses needed:</p>
+                <p>{strength.guesses}</p>
+                <p className={styles.info}>Calculation time:</p>
+                <p>{strength.calcTime} ms</p>
             </div>
         </div>
     );

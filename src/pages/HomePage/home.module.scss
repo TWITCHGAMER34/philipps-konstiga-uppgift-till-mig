@@ -1,6 +1,56 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh; // This makes the container take up the full height of the viewport
+}
+
 .titleContainer {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; // This makes the container take up the full height of the viewport
+}
+
+.joke{
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: white;
+  text-align: center; // This centers the text within the joke element
+}
+
+.modalContent {
+  background: #f8f8f8;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  outline: none;
+}
+
+.modalHeader {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.modalBody {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.modalCloseButton {
+  background: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
