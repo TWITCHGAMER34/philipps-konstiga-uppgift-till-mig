@@ -1,0 +1,87 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    box-sizing: border-box;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.inputField {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.progressContainer {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: white;
+    transition: width 0.3s ease-in-out;
+    span{
+        display: block;
+        padding-inline: 10px;
+        width: 62.5px;
+    }
+}
+
+.totalProgressContainer {
+    width: 104%;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.totalProgressBar {
+    height: 50px;
+    text-align: right;
+    line-height: 10px;
+    color: white;
+    transition: width 0.3s ease-in-out;
+    display: grid;
+    place-items: center;
+    white-space: nowrap;
+    width: 62.5px;
+    span {
+        padding-inline: 10px;
+    }
+}
+
+.scores{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.warning {
+    color: red;
+}
+
+.suggestions {
+    color: orange;
+}
+
+.info {
+    color: white;
+}

@@ -1,0 +1,30 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+.joke {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.meme {
+  max-width: 500px;
+  height: auto;
+  border: #4caf50 2px solid;
+  border-radius: 10px;
+}

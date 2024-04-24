@@ -1,7 +1,7 @@
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim';
-import { useEffect, useState } from 'react';
-import { Container } from '@tsparticles/engine';
+import Particles, {initParticlesEngine} from '@tsparticles/react';
+import {loadSlim} from '@tsparticles/slim';
+import {useEffect, useState} from 'react';
+import {Container} from '@tsparticles/engine';
 
 export default function particles() {
     const [init, setInit] = useState(false);
@@ -24,7 +24,6 @@ export default function particles() {
             id='footer-particles'
             particlesLoaded={particlesLoaded}
             options={{
-                fullScreen: true,
                 fpsLimit: 120,
                 particles: {
                     color: {
@@ -34,6 +33,22 @@ export default function particles() {
                         direction: 'top',
                         enable: true,
                         speed: 0.5,
+                    },
+                    interactivity: {
+                        events: {
+                            onHover: {
+                                enable: true,
+                                mode: "grab"
+                            },
+                        },
+                        modes: {
+                            "grab": {
+                                "distance": 200,
+                                "lineLinked": {
+                                    "opacity": 1
+                                }
+                            },
+                        }
                     },
                     number: {
                         density: {
