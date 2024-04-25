@@ -1,15 +1,15 @@
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import styles from './navbar.module.scss';
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import JokesPage from "./pages/JokesGenerator/JokesGen.tsx";
 import PassGen from "./pages/PasswordGen/PassGen.tsx";
 import PassCheck from "./pages/PasswordCheck/PassCheck.tsx";
 import ParticlesBg from "./pages/part/Particles.tsx";
-import styles from './navbar.module.scss';
 import FactOrFalse from "./pages/fact_&_false/FactOrFalse.tsx";
-import FactOrFalseGame from "./pages/fact_&_false/FactOrFalsePlay.tsx";
 import Page404 from "./404.tsx";
 import FactsGameEnd from "./pages/fact_&_false/FactsGameEnd.tsx";
 import FactOrFalseChoose from "./pages/fact_&_false/FactOrFalseChoose.tsx";
+import FactOrFalsePlay from "./pages/fact_&_false/FactOrFalsePlay.tsx";
 
 export default function Router() {
     return (
@@ -29,7 +29,7 @@ export default function Router() {
                 <Route path={"/passcheck"} element={<PassCheck/>}/>
                 <Route path={"/Fact&False"} element={<FactOrFalse/>}/>
                 <Route path={"/Fact&False/Choose"} element={<FactOrFalseChoose/>}/>
-                <Route path={"/Fact&False/Play/:gameMode"} element={<FactOrFalseGame/>}/>
+                <Route path={"/Fact&False/Play/:gameMode"} element={<FactOrFalsePlay/>}/>
                 <Route path={"/Fact&False/end"} element={<FactsGameEnd/>}/>
                 <Route path={"*"} element={<Page404/>}/>
             </Routes>

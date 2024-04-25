@@ -27,14 +27,19 @@ export default function JokesPage() {
 
     return (
         <div className={styles.pageContainer}>
-            <h1 className={styles.title}>Generate Jokes</h1>
-            <button className={styles.button} onClick={generateJokes} disabled={loadingJoke}>Generate Joke</button>
-            <p className={styles.joke}>{joke.setup}</p>
-            {showAnswer && <p className={styles.joke}>{joke.punchline}</p>}
-            {!showAnswer && joke.setup && <button className={styles.button} onClick={() => setShowAnswer(true)}>Show Answer</button>}
+            <div className={styles.jokeBox}>
+                <h1 className={styles.title}>Generate Jokes</h1>
+                <button className={styles.button} onClick={generateJokes} disabled={loadingJoke}>Generate Joke</button>
+                <p className={styles.joke}>{joke.setup}</p>
+                {showAnswer && <p className={styles.joke}>{joke.punchline}</p>}
+                {!showAnswer && joke.setup &&
+                    <button className={styles.button} onClick={() => setShowAnswer(true)}>Show Answer</button>}
+            </div>
+            <div className={styles.memeBox}>
             <h1 className={styles.title}>Generate memes</h1>
             <button className={styles.button} onClick={generateMeme} disabled={loadingMeme}>Generate Meme</button>
             {meme && <img className={styles.meme} src={meme} alt="Meme"/>}
+            </div>
         </div>
     );
 }

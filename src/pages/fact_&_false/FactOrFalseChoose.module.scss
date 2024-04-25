@@ -1,0 +1,70 @@
+.gameModeSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2em;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+.LinkBox {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+
+  a {
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      grid-column: span 3;
+      text-align: center;
+      background-color: #238823;
+      backdrop-filter: blur(5px);
+      &:hover {
+        background-color: #1c6e1c;
+        color: white;
+      }
+    }
+
+    &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+      grid-column: span 4;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      background-color: #d1d13a;
+      color: black;
+      &:hover {
+        background-color: #b3b334;
+        color: black;
+      }
+    }
+
+    &:nth-child(8) {
+      grid-column: span 12;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      background-color: #c83131;
+      &:hover {
+        background-color: #a82a2a;
+        color: white;
+      }
+    }
+  }
+}
+
+.link {
+  display: grid;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

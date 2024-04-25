@@ -1,4 +1,6 @@
-export let initialItems = [
+import {QuestionType} from "../FactOrFalseChoose.tsx";
+
+export let initialItemsMedium: QuestionType[] = [
     {text: "The Earth is the only planet in our solar system known to support life.", type: "fact"},
     {text: "Chocolate comes from a bean.", type: "fact"},
     {text: "The population of the world is over 10 billion people.", type: "false"},

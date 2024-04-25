@@ -4,6 +4,14 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  .FactText{
+    color: green;
+    text-shadow: 0 0 10px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00;
+    }
+  .FalseText{
+    color: red;
+    text-shadow: 0 0 5px #ff3737, 0 0 5px #ff3737, 0 0 5px #ff3737, 0 0 5px #ff3737;
+  }
 }
 
 .gameDescription {
@@ -21,6 +29,14 @@
   border-radius: 20px;
   backdrop-filter: blur(2px);
   text-align: center;
+  height: 500px;
+  h1{
+    margin: 0 0 20px 0;
+  }
+  p{
+    margin: 10px 0 10px 0 ;
+
+  }
 }
 
 .startButton {
@@ -49,6 +65,7 @@
 .buttons {
   display: flex;
   gap: 10px;
+  backdrop-filter: blur(1px);
 }
 
 .endContainer {
