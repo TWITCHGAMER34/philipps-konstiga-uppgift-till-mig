@@ -3,6 +3,7 @@ import styles from './home.module.scss';
 import axios from 'axios';
 import {useState, useEffect} from "react";
 import Modal from 'react-modal';
+import {Helmet} from "react-helmet";
 
 Modal.setAppElement('#root');
 
@@ -37,6 +38,7 @@ export default function HomePage() {
 
     return (
         <div className={styles.pageContainer}>
+            <Helmet title={"Home"} />
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
@@ -64,7 +66,7 @@ export default function HomePage() {
                     animate={{opacity: 1, scale: 1, y: 0}}
                     transition={{duration: 0.5}}
                 >
-                    Welcome to this page
+                    Welcome to PlayNPractical
                 </motion.h1>
             </div>
             <motion.h2

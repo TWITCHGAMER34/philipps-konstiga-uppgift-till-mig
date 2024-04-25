@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import styles from './game.module.scss';
 import {Choice, GameMode} from "./FactOrFalseChoose.tsx";
 
@@ -76,18 +76,20 @@ export default function FactOrFalsePlay() {
     return (
         <div className={styles.gameContainer}>
             <h1><span className={styles.FactText}>Fact</span> or <span className={styles.FalseText}>False</span></h1>
-            <p>Score: {score}</p>
-            <p>Number of questions left: {items?.length}</p>
-            <p className={styles.question}>{currentItem?.text}</p>
-            <div className={styles.buttons}>
-                <button onClick={() => handleUserChoice("fact")}>
-                    <FontAwesomeIcon icon={faCheck} color="green" />
-                </button>
-                <button onClick={() => handleUserChoice("false")}>
-                    <FontAwesomeIcon icon={faTimes} color="red" />
-                </button>
+            <div className={styles.GameCard}>
+                <p className={styles.GameText}>Score: <span className={styles.ScoreInt}>{score}</span></p>
+                <p className={styles.GameText}>Number of questions left: <span className={styles.Left}>{items?.length}</span></p>
+                <p className={styles.question}>{currentItem?.text}</p>
+                <div className={styles.buttons}>
+                    <button onClick={() => handleUserChoice("fact")}>
+                        <FontAwesomeIcon icon={faCheck} color="green"/>
+                    </button>
+                    <button onClick={() => handleUserChoice("false")}>
+                        <FontAwesomeIcon icon={faTimes} color="red"/>
+                    </button>
+                </div>
+            <p className={message.startsWith("Correct") ? styles.correctMessage : styles.incorrectMessage}>{message}</p>
             </div>
-            <p>{message}</p>
         </div>
     );
 }

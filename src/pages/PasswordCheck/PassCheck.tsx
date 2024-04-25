@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import styles from './pass.module.scss';
 import zxcvbn from 'zxcvbn';
+import {Helmet} from "react-helmet";
 
 export default function PassCheck() {
     const [password, setPassword] = useState('');
@@ -38,6 +39,7 @@ export default function PassCheck() {
 
     return (
         <div className={styles.pageContainer}>
+            <Helmet title={"Check your password"} />
             <h1 className={styles.title}>Check your password</h1>
             <input className={styles.inputField} type="password" value={password}
                    onChange={(e) => setPassword(e.target.value)}/>

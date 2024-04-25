@@ -1,6 +1,7 @@
-import {useState} from 'react';
 import axios from 'axios';
 import styles from './jokesgen.module.scss';
+import {Helmet} from "react-helmet";
+import {useState} from "react";
 
 export default function JokesPage() {
     const [joke, setJoke] = useState({setup: '', punchline: ''});
@@ -27,6 +28,7 @@ export default function JokesPage() {
 
     return (
         <div className={styles.pageContainer}>
+            <Helmet title={"JokesNMemes"} />
             <div className={styles.jokeBox}>
                 <h1 className={styles.title}>Generate Jokes</h1>
                 <button className={styles.button} onClick={generateJokes} disabled={loadingJoke}>Generate Joke</button>

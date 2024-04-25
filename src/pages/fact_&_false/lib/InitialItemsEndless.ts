@@ -16,5 +16,4 @@ export let initialItemsEndless: QuestionType[] = [
     ...initialItemsGeography,
     ...initialItemsHistory,
     ...initialItemsScience
-
 ];

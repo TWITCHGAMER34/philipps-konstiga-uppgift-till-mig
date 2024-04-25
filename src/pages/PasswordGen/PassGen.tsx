@@ -3,6 +3,7 @@ import styles from './passgen.module.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCopy} from '@fortawesome/free-solid-svg-icons';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {Helmet} from "react-helmet";
 
 export default function PassGen() {
     const [password, setPassword] = useState('');
@@ -47,6 +48,7 @@ export default function PassGen() {
 
     return (
         <div className={styles.pageContainer}>
+            <Helmet title={"Password Generator"} />
             <h1 className={styles.title}>Generate a password</h1>
             <p>Selected length: {length} [{rangeIcon}]</p>
             <input style={sliderThumbStyle} className={styles.inputField} id={styles.myRange} type="range" min={0} max={100} placeholder="Length" value={length}

@@ -1,5 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import styles from './game.module.scss';
+import {Helmet} from "react-helmet";
 
 export default function FactOrFalse() {
     const navigate = useNavigate();
@@ -10,6 +11,7 @@ export default function FactOrFalse() {
 
     return (
         <div className={styles.gameDescription}>
+            <Helmet title={"Fact & False"} />
             <h1><u>Fact or False</u></h1>
             <p>
                 Welcome to Fact or False! In this game, you will be presented with a series of statements.

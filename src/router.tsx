@@ -1,5 +1,6 @@
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import styles from './navbar.module.scss';
+import {Helmet} from "react-helmet";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import JokesPage from "./pages/JokesGenerator/JokesGen.tsx";
 import PassGen from "./pages/PasswordGen/PassGen.tsx";
@@ -14,6 +15,7 @@ import FactOrFalsePlay from "./pages/fact_&_false/FactOrFalsePlay.tsx";
 export default function Router() {
     return (
         <BrowserRouter>
+            <Helmet titleTemplate={"%s | PlayNPractical"} />
             <nav className={styles.navbar}>
                 <Link to={"/"} className={styles.navLink}>Home</Link>
                 <Link to={"/Jokes"} className={styles.navLink}>Jokes</Link>

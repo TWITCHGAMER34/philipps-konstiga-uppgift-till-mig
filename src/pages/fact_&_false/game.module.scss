@@ -4,11 +4,13 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  .FactText{
+
+  .FactText {
     color: green;
     text-shadow: 0 0 10px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00;
-    }
-  .FalseText{
+  }
+
+  .FalseText {
     color: red;
     text-shadow: 0 0 5px #ff3737, 0 0 5px #ff3737, 0 0 5px #ff3737, 0 0 5px #ff3737;
   }
@@ -30,11 +32,13 @@
   backdrop-filter: blur(2px);
   text-align: center;
   height: 500px;
-  h1{
+
+  h1 {
     margin: 0 0 20px 0;
   }
-  p{
-    margin: 10px 0 10px 0 ;
+
+  p {
+    margin: 10px 0 10px 0;
 
   }
 }
@@ -97,10 +101,64 @@
   border-color: red;
 }
 
-.incorrectAns{
+.incorrectAns {
   color: red;
 }
 
-.correctAns{
+.correctAns {
   color: green;
+}
+
+.GameCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  border: white 2px solid;
+  border-radius: 20px;
+  width: 900px;
+  height: 500px;
+  text-align: center;
+}
+
+.ScoreInt {
+  color: green;
+}
+
+.GameText {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.Left {
+  color: red;
+}
+
+.correctMessage {
+  color: green;
+}
+
+.incorrectMessage {
+  color: red;
+}
+
+.playAgainButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  &:hover {
+    background-color: #285f2e;
+    color: white;
+  }
 }
